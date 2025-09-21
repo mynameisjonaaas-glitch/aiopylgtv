@@ -196,7 +196,7 @@ class TestHealthRecordAPI(unittest.TestCase):
             'gender': 'male',
             'phone': '555-0789',
             'email': 'testpatient@example.com',
-            'blood_type': 'o_positive',
+            'blood_type': 'O+',
             'allergies': ['dust', 'pollen'],
             'medical_conditions': ['asthma'],
             'medications': ['inhaler']

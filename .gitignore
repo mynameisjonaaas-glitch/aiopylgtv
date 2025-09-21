@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Medical records database files
+*.db
+health_records.db
+example_health_records.db
+test.db
