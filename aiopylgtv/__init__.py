@@ -8,6 +8,21 @@ from .lut_tools import (
 )
 from .webos_client import PyLGTVCmdException, PyLGTVPairException, WebOsClient
 
+# Medical records system (optional import)
+try:
+    from .medical_records import (
+        Patient,
+        MedicalRecord,
+        Appointment,
+        Doctor,
+        HealthRecordDB,
+        HealthRecordAPI,
+        AuthManager,
+    )
+    _medical_records_available = True
+except ImportError:
+    _medical_records_available = False
+
 __all__ = [
     "create_dolby_vision_config",
     "read_cal_file",
@@ -19,3 +34,14 @@ __all__ = [
     "PyLGTVPairException",
     "WebOsClient",
 ]
+
+if _medical_records_available:
+    __all__.extend([
+        "Patient",
+        "MedicalRecord",
+        "Appointment",
+        "Doctor",
+        "HealthRecordDB",
+        "HealthRecordAPI",
+        "AuthManager",
+    ])
